@@ -7,3 +7,12 @@ header {
     color: white;
     padding: 20px;
 }
+
+
+.big-image {
+  transform: scale(2);
+  transition: transform 0.3s ease;
+  cursor: zoom-out;
+  z-index: 999;
+  position: relative;
+}

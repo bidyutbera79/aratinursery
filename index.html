@@ -103,7 +103,16 @@ This file uses Tailwind CSS via CDN for quick styling. Replace placeholder image
         <!-- Flower card -->
         <article class="bg-white rounded-lg shadow-sm overflow-hidden">
 
-<img id="flower1" src="images/rhapis_excelsa.jpg" alt="flower1" class="w-full h-44 object-cover">
+
+
+<!-- image(s) you want to be double-click zoomable -->
+<img class="zoomable w-full h-44 object-cover" src="images/rhapis_excelsa.jpg" alt="flower1">
+<img class="zoomable w-full h-44 object-cover" src="images/another.jpg" alt="flower2">
+
+<!-- make sure script.js is loaded (prefer at end of body) -->
+<script src="script.js"></script>
+
+
 
           <div class="p-4">
             <h4 class="font-semibold">Rose Bouquet</h4>

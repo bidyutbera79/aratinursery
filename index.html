@@ -1,21 +1,41 @@
-<!DOCTYPE html>
+<!--
+AratiNursery - Sample single-file website (index.html)
+
+How to use:
+1. Create a GitHub repository named `aratinursery` (or any name).
+2. Add this file as `index.html` in the repository root.
+3. In repo Settings -> Pages -> Source, select `main` branch and `/ (root)` then Save.
+4. Your site will be served at `https://<your-username>.github.io/<repo-name>/` within a few minutes.
+
+This file uses Tailwind CSS via CDN for quick styling. Replace placeholder images and texts as needed.
+-->
+
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arati Nursery – Greenery for Every Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AratiNursery — Greenery for Every Home</title>
+  <meta name="description" content="AratiNursery: Plants, Flowers & Gardening supplies. Greenery for Every Home.">
+  <!-- Tailwind CDN for quick prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles */
+    .hero-bg { background-image: linear-gradient(90deg, rgba(34,197,94,0.12), rgba(16,185,129,0.06)); }
+  </style>
 </head>
-<body class="bg-green-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-green-200 rounded-lg flex items-center justify-center text-green-800 font-bold">AN</div>
+        <div>
+          <h1 class="font-extrabold text-lg">AratiNursery</h1>
+          <p class="text-xs text-gray-500">Greenery for Every Home</p>
+        </div>
+      </div>
 
-  <!-- Header -->
-  <header class="bg-green-700 text-white py-5">
-    <h1 class="text-center text-3xl font-bold tracking-wide">🌿 Arati Nursery 🌿</h1>
-    <p class="text-center text-lg -mt-1">Greenery for Every Home</p>
-  </header>
-
-  <!-- Navbar -->
-  <nav class="bg-green-600 text-white py-3">
+      <nav class="bg-green-600 text-white py-3">
     <ul class="flex justify-center space-x-6 font-semibold">
       <li><a href="index.html" class="hover:underline">Home</a></li>
       <li><a href="indoor.html" class="hover:underline">Indoor Plants</a></li>
@@ -24,19 +44,70 @@
     </ul>
   </nav>
 
-  <!-- Banner -->
-  <section class="text-center py-8">
-    <img src="banner.jpg" alt="Nursery Banner" class="w-full max-h-96 object-cover mx-auto">
-  </section>
 
-  <!-- About -->
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-3 text-green-700">Welcome to Arati Nursery</h2>
-    <p class="text-lg leading-relaxed">
-      We offer a wide selection of fresh and healthy plants to enrich your home and garden.
-      Explore our Indoor and Outdoor plant collections suitable for every environment.
-    </p>
-  </section>
+      <div class="flex items-center gap-3">
+        <a href="tel:+918617749093" class="hidden md:inline-block px-3 py-1.5 border rounded-md text-sm">Call: 8617749093</a>
+        <a href="https://wa.me/919874515422" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-1.5 rounded-md text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8.5a4.5 4.5 0 014.5-4.5h9a4.5 4.5 0 014.5 4.5v7a4.5 4.5 0 01-4.5 4.5H15l-3 3v-3H7.5A4.5 4.5 0 013 15.5v-7z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobileBtn" class="md:hidden ml-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#home" class="py-2">Home</a>
+        <a href="#Indoor Plants" class="py-2">Indoor Plants</a>
+        <a href="#Outdoor plants" class="py-2">Outdoor plants</a>
+<a href="#Big Plants" class="hover:text-green-600">Big Plants</a>
+<a href="#Flowers" class="hover:text-green-600">Flowers</a>
+<a href="#Fruit Plants" class="hover:text-green-600">Fruit Plants</a>
+
+
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero-bg py-16">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">Welcome to <span class="text-green-600">AratiNursery</span></h2>
+          <p class="mt-4 text-lg text-gray-700">Greenery for Every Home — fresh plants, vibrant flowers, and expert gardening advice. Visit our nursery at Uttar-Sargaria,Falta,West Bengal-743504.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#Flowers" class="inline-block px-5 py-3 bg-green-600 text-white rounded-md shadow">Browse Flowers</a>
+            <a href="#contact" class="inline-block px-5 py-3 border rounded-md">Contact Us</a>
+          </div>
+
+          <ul class="mt-6 text-sm text-gray-600 space-y-2">
+            <li><strong>Address:</strong> Mohanpur,Aryapara,24 PGS(S)-743377</li>
+            <li><strong>Mobile:</strong> 8617749093</li>
+            <li><strong>WhatsApp:</strong> Yes — <a href="https://wa.me/918617749093" class="text-green-600">Chat now</a></li>
+            <li><strong>Hours:</strong> Mon–Sat 9:00 AM — 6:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+          <img src="images/pond.jpg?auto=format&fit=crop&w=1200&q=60" alt="nursery plants" class="w-full h-70 object-cover">
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+ 
 
   <!-- Contact -->
   <section id="contact" class="bg-white shadow-lg max-w-4xl mx-auto my-10 p-6 rounded-lg">
